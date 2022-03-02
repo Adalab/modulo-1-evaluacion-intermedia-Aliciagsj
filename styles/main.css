@@ -16,6 +16,8 @@
   --color-main-text: #ffffff;
 }
 
+/*BODY STYLES*/
+
 body {
   font-family: "Rubik", sans-serif;
 }
@@ -28,17 +30,16 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 .header_logo {
   padding: 10px;
 }
 
-. .logo_adalab {
+.logo_adalab {
   width: 155px;
-}
-
-.header_menu {
 }
 
 .header_menu_list {
@@ -60,3 +61,43 @@ header {
 }
 
 /*MAIN STYLES*/
+
+main {
+  height: 100vh;
+  position: relative;
+  top: 0;
+}
+
+.container {
+  height: 100vh;
+  background-color: var(--color-main-background);
+  font-family: var(--font-family);
+  color: var(--color-main-text);
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+@media all and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  .header_logo {
+    padding: 0px;
+  }
+
+  .header_menu_list_item {
+    padding: 0px 0px 0px 20px;
+  }
+
+  .container {
+    font-size: var(--font-size-title-desktop);
+  }
+}
